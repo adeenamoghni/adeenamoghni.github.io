@@ -1,0 +1,16 @@
+name: "Adeena Moghni"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Resume"
+      href: resume.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<am6592@cumc.columbia.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/adeenamoghni/
+output:
+  html_document:
+    theme: cosmo
