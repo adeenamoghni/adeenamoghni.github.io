@@ -20,19 +20,23 @@ inspection_df =
   rest_inspec %>%
   na.omit() %>% 
   separate(inspection_date, into = c("year", "month", "day"), sep = "-") %>%
-  filter (year == 2017) 
+  filter (year == 2017) %>% 
+  filter(boro != "Missing")
   
 score_per_month = 
   inspection_df %>% 
   na.omit(inspection_df) %>% 
-  group_by(month, boro) %>% 
-  summarize(score = score)
+  group_by(boro) %>% 
+  summarize(score = score) 
+```
 
-box_ggplot = 
-  ggplot(score_per_month, aes(x = month, y = score, fill = month)) +
-  geom_boxplot() +
-  facet_wrap(~boro)
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
-
-ggplotly(box_ggplot)
+```{r}
+score_per_month %>% 
+  plot_ly(
+      x = ~fct_reorder(boro, score), y = ~score, color = ~boro,
+      type = "box") %>% 
+  layout(
+    xaxis = list(title = "Borough"),
+    yaxis = list(title = "Score")
+    )
 ```
