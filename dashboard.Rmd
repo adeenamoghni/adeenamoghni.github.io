@@ -1,0 +1,38 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("rest_inspec")
+
+inspection_df = 
+  rest_inspec %>%
+  na.omit() %>% 
+  separate(inspection_date, into = c("year", "month", "day"), sep = "-") %>%
+  filter (year == 2017) 
+  
+score_per_month = 
+  inspection_df %>% 
+  na.omit(inspection_df) %>% 
+  group_by(month, boro) %>% 
+  summarize(score = score)
+
+box_ggplot = 
+  ggplot(score_per_month, aes(x = month, y = score, fill = month)) +
+  geom_boxplot() +
+  facet_wrap(~boro)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+ggplotly(box_ggplot)
+```
