@@ -1,16 +1,16 @@
 name: "Adeena Moghni"
 output_dir: "."
 navbar:
-  title: "Home"
+  title: "Adeena Moghni"
   right:
-    - text: "About"
-      href: about.html
     - text: "Resume"
       href: resume.html
     - icon: fa-envelope fa-lg
-      href: mailto:<am6592@cumc.columbia.edu>
+      href: mailto:<adeenamoghni@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/adeenamoghni/
+    - icon: fa-brands fa-linkedin
+      href: https://www.linkedin.com/in/adeena-moghni/
 output:
   html_document:
     theme: cosmo

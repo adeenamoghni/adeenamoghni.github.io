@@ -1,9 +1,114 @@
 ---
-title: "This is my resume"
+title: "Adeena Moghni Resume"
 output: 
   html_document:
     toc: true
+    toc_depth: 4
     toc_float: true
 ---
-# My CV
+
+For a PDF of my resume, please click [here](adeena_moghni_resume_2024.pdf)
+
+#### <u> **EDUCATION** </u> 
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left"> **Columbia University Mailman School of Public Health, New York, NY** </td>
+    <td style="text-align:right">**5/2026**</td>
+  </tr>
+</table>
+
+*Candidate for Master of Science in Biostatistics, Concentration in Statistical Genetics*  
+**Courses: **Biostatistical Methods, Data Science, Human Population Genetics, Probability  
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left"> **Northeastern University, Boston, MA** </td>
+    <td style="text-align:right">**5/2022**</td>  
+  </tr>
+</table>
+
+*Bachelor of Science in Bioengineering, Concentration in Cell and Tissue Engineering, magna cum laude*  
+
+#### <u> **SKILLS** </u>  
+
+**Computer: ** R, Matlab, Prism, C++, HiRes automation and coding, Microsoft Office Suites Certified  
+**Lab: ** Cell Culture (iPS, Primary, Suspension, and Adherent Cells), Reverse Transcription, dPCR,
+qPCR, RNA Isolation (Bead-Based), TECAN Fluent Sytems, cGMP, cGDP, ELN Documentation  
+
+#### <u> **EXPERIENCE** </u>  
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left"> **Korro Bio, Cambridge, MA** </td>
+    <td style="text-align:right">**10/2022 to 7/2024**</td>  
+  </tr>
+</table>
+
+*Research Associate, High Throughput Screening*
+
+* Designed, scripted, and validated automated high throughput methods for NGS, PCR,
+and cell-based assays using various instruments (HiRes, BlueWasher, BioTek, Viaflo, dPCR)  
+* Screened oligonucleotide drug candidates in iPS and primary cells in 96- and 384-well plate formats  
+* Collected and interpreted data to present findings to different groups  
+* Worked as the HTS lead for the oligonucleotide delivery team    
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left"> **Dragonfly Therapeutics, Waltham, MA** </td>
+    <td style="text-align:right">**6/2021 to 12/2021**</td>  
+  </tr>
+</table>
+
+*Co-op, High Throughput Expression and Purification*
+
+* Assisted in the development of an automated protein expression platform using the
+TECAN Fluent in HEK293 and CHO cells to screen drug candidates  
+* Purified tri-specific and monoclonal antibodies using high throughput methods  
+* Designed experiments to establish a high throughput expression protocol using CHO cells 
+* Optimized in-lab transfection methods using various transfection reagents  
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left"> **Thermo Fisher Scientific, Cambridge, MA** </td>
+    <td style="text-align:right">**7/2020 to 12/2020**</td>  
+  </tr>
+</table>
+
+*Co-op, Process Sciences*
+
+* Led, performed, and trained individuals in passaging a lab- scale adherent cell culture from
+vial thaw to HyperStack inoculation, transfection, and harvest and clarification  
+* Developed affinity ligand chromatography techniques using the AKTA- Avant system  
+* Analyzed data in client meetings to help support decisions in process development  
+
+#### <u> **PROJECTS** </u>
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left"> **I.V. Glove Neonatal Device, Northeastern University** </td>
+    <td style="text-align:right">**5/2021 to 5/2022**</td>  
+  </tr>
+</table>
+
+*Senior Capstone Project*
+
+* Worked in conjunction with the company I.V. Glove to build and test a prototype of a
+functional neonatal I.V securement device
+* Presented updates and final results to a panel of judges; wrote a capstone research paper
+outlining project goals, timelines, deliverables, and key project decisions
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left"> **Rural Health Scholars, Northeastern University** </td>
+    <td style="text-align:right">**1/2022 to 5/2022**</td>  
+  </tr>
+</table>
+
+*Directed Research Study*
+
+* Worked on an interdisciplinary team of engineering, public health, computer science, and
+business students to explore and gather data on rural healthcare delivery how it affects
+leading causes of morbidity, mortality, and health disparities/ outcomes in rural areas
+
 
