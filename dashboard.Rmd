@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Plots of NYC Restaurant Inspections"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -22,21 +22,66 @@ inspection_df =
   separate(inspection_date, into = c("year", "month", "day"), sep = "-") %>%
   filter (year == 2017) %>% 
   filter(boro != "Missing")
+```
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Count of Violation Types by Cuisine in Queens (2017)
+```{r}  
+violation_type_queens = 
+  inspection_df %>% 
+  filter(boro == "QUEENS") %>% 
+  group_by(cuisine_description) %>% 
+  summarize(
+    sum = n(),
+    critical = sum(critical_flag == "Critical"),
+    not_critical = sum(critical_flag == "Not Critical")
+  ) 
   
-score_per_month = 
+violation_type_queens %>% 
+  plot_ly(x = ~cuisine_description, y = ~critical, type = "bar", name = 'Critical Violation') %>% 
+  add_trace(y = ~not_critical, name = 'Not Critical Violation') %>% 
+  layout(
+    xaxis = list(title = "Cuisine Type"),
+    yaxis = list(title = "Count"),
+    barmode = 'stack'
+  )
+```
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Distribution of Scores by Borough (2017)
+```{r}
+score_per_boro = 
   inspection_df %>% 
   na.omit(inspection_df) %>% 
   group_by(boro) %>% 
-  summarize(score = score) 
-```
+  summarize(score = score)
 
-```{r}
-score_per_month %>% 
+score_per_boro %>% 
   plot_ly(
       x = ~fct_reorder(boro, score), y = ~score, color = ~boro,
       type = "box") %>% 
   layout(
     xaxis = list(title = "Borough"),
-    yaxis = list(title = "Score")
-    )
+    yaxis = list(title = "Score"))
+```
+
+### Count of Violation Types by Month in Each Boro (2017)
+```{r}
+violation_month = 
+  inspection_df %>% 
+  group_by(month, boro) %>% 
+  summarize(
+    count = n(),
+    avg_score = mean(score)) %>% 
+  ungroup()
+
+violation_month %>% 
+  plot_ly(x = ~month, y = ~count, type = 'scatter', mode = 'lines+markers', color = ~boro) %>% 
+  layout(
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Violation Count"),
+    barmode = 'stack'
+  )
 ```

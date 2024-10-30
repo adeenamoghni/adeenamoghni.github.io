@@ -10,3 +10,5 @@ output:
 # Welcome!  
 
 My name is Adeena and I am currently a Biostatistics MS student at Columbia University! I come from a bioengineering background and I have extensive experience in research, data analysis, and lab automation. You can learn more about [academic and professional experiences](resume.html) on this website. This site also contains my [email](mailto:adeenamoghni@gmail.com) and [linkedin](https://www.linkedin.com/in/adeena-moghni/) contact information, as well as my [github](https://github.com/adeenamoghni).
+
+This site also links to a [dashboard](dashboard.html) that contains different graphs from the NYC Restaurant Inspection dataset from the p8015.datasets library
